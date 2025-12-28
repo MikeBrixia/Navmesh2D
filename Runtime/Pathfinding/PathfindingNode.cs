@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
 using Unity.Mathematics;
-using Core;
 
-namespace AIModule.AI_Pathfinding
+namespace Navmesh2D.Pathfinding
 {
 
     ///<summary>

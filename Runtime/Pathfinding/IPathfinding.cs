@@ -4,7 +4,7 @@ using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace Core
+namespace Navmesh2D.Pathfinding
 {
     public interface IPathfinding
     {

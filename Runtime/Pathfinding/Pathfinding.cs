@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using ComputationGeometry_DOTS;
 using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
-using Core;
-using AIModule.Navigation;
 
-namespace AIModule.AI_Pathfinding
+namespace Navmesh2D.Pathfinding
 {
 
     public enum EPathfinding { AStar, Dijkstra }

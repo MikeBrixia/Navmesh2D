@@ -1,14 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using ComputationalGeometry;
-using ComputationGeometry_DOTS;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 using UnityEngine;
-using Core;
 
-namespace AIModule.Navigation
+namespace Navmesh2D
 {
     public class NavMeshData : ScriptableObject
     {

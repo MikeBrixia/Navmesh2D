@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace AIModule.Navigation
+namespace Navmesh2D
 {
     [CustomEditor(typeof(NavMesh2D))]
     public class NavMeshInspector : Editor

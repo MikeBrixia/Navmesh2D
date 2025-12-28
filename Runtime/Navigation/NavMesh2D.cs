@@ -6,11 +6,9 @@ using Unity.Collections;
 using Unity.Mathematics;
 using UnityEditor;
 using System.Linq;
-using ComputationGeometry_DOTS;
 using UnityEngine.SceneManagement;
-using Core;
 
-namespace AIModule.Navigation
+namespace Navmesh2D
 {
     [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(BoxCollider2D))]
     [RequireComponent(typeof(PolygonCollider2D))]
@@ -253,7 +251,7 @@ namespace AIModule.Navigation
             // All the nav mesh obstacle collider inside the nav mesh volume.
             List<Collider2D> obstacleCollider = new List<Collider2D>();
             // The number of nav mesh obstacles inside the nav mesh volume.
-            int obstaclesNumber = volume.OverlapCollider(filter, obstacleCollider);
+            int obstaclesNumber = volume.Overlap(filter, obstacleCollider);
             // The thickness value of the border between nav mesh obstacles.
             Vector2 thickness = new Vector2(boundThickness, boundThickness);
             
@@ -336,7 +334,7 @@ namespace AIModule.Navigation
             for (int i = 0; i < cornersCount; i++)
             {
                 // Get current angle in radians.
-                float currentAngle = Core.Math.DegreesToRadians(angles[i]);
+                float currentAngle = angles[i] * Mathf.Deg2Rad;
                 Vector2 angleDirection = new Vector2(Mathf.Cos(currentAngle), Mathf.Sin(currentAngle));
                 Vector2 point = center + radius * angleDirection;
                 

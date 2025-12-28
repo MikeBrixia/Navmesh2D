@@ -1,12 +1,11 @@
 
-using ComputationGeometry_DOTS;
+using NavMesh2D;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
-using Core;
 
-namespace AIModule.AI_Pathfinding
+namespace Navmesh2D.Pathfinding
 {
     ///<summary>
     /// A* Pathfinding algorithm.
@@ -154,7 +153,7 @@ namespace AIModule.AI_Pathfinding
         private bool IsNavigablePoint(NativeArray<Triangle2D> navigationInfo, float2 point)
         {
             foreach(Triangle2D triangle in navigationInfo)
-                if(GeometryLibrary.ContainsPoint(triangle, point))
+                if(MathUtils.ContainsPoint(triangle, point))
                     return true;
             return false;
         }
